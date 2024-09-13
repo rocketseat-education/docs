@@ -8,9 +8,9 @@ Linguagem de Modelagem Unificada ou UML, é uma notação, que possibilita a rep
   <img src="./images/uml-1.png" alt="Unified Modeling Language">
 </div>
 
-## Introdução
+### Introdução
 
-Na UML, temos três conceitos necessários para compreendermos inicialmente:&#x20;
+Na UML, temos três conceitos necessários para compreendermos inicialmente:
 
 **Diagramas**, **elementos** e **relacionamentos**.
 
@@ -25,7 +25,7 @@ As notações UML, são distribuídas em duas categorias de diagramas, a estrutu
 #### Diagramas estruturais
 
 * **Diagrama de classe:** O Diagrama de Classes é utilizado para fazer a representação de estruturas de classes de negócio, interfaces e outros componentes do sistema. Por esta característica, este diagrama é considerado o mais importante para a UML, pois auxilia a maioria dos demais diagramas.
-* **Diagrama de objetos**: Este diagrama, representa os objetos existentes em um determinado instante ou fato na aplicação. Assim, conseguimos ter uma perspectiva do estado de nossos objetos, mediante a interação dos usuários no sistema.&#x20;
+* **Diagrama de objetos**: Este diagrama, representa os objetos existentes em um determinado instante ou fato na aplicação. Assim, conseguimos ter uma perspectiva do estado de nossos objetos, mediante a interação dos usuários no sistema.
 
 > [!NOTE]
 > Existem outras categorias de diagramas estruturais e comportamentais, porém iremos focar nos citados acima.

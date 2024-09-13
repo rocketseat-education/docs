@@ -73,7 +73,7 @@ Vamos descrever em UML e depois em código, algumas das principais funcionalidad
 
 </details>
 
-## Encapsulamento
+### Encapsulamento
 
 > Nem tudo precisa estar disponível para todos
 
@@ -171,7 +171,7 @@ Vamos a revisão de nossa implementação
 
 </details>
 
-## Herança
+### Herança
 
 > Nem tudo se copia, às vezes se herda.
 
@@ -292,7 +292,7 @@ Podemos avaliar a importância de compreender os pilares de POO para ter uma mel
 > [!WARNING]
 > Será que todos os sistemas de mensagens realizam as suas operações de uma mesma maneira? E agora ? Este é um trabalho para os pilares **Abstração** e **Polimorfismo**.
 
-## Abstração
+### Abstração
 
 > Para você ser é preciso você fazer.
 
@@ -370,7 +370,7 @@ Observem a nova estruturação dos códigos abaixo, com base na implementação 
 > [!TIP]
 > Em Java, o conceito de abstração é representado pela palavra reservada `abstract` e métodos que **NÃO** possuem corpo na classe abstrata (pai) e é muito difícil falar de _abstração_ e **NÃO** mencionar _polimorfismo_.
 
-## Polimorfismo
+### Polimorfismo
 
 > Um mesmo comportamento, de várias maneiras.
 
@@ -409,7 +409,7 @@ public class ComputadorPedrinho {
 > [!NOTE]
 > Para concluirmos a compreensão, Polimorfismo permite que as classes mais abstratas, determine ações uniformes, para que cada classe filha concreta, implemente os comportamentos de forma específica.
 
-### Modificador protected
+#### Modificador protected
 
 Vamos para uma retrospectiva quanto ao requisito do nosso sistema de mensagens instantâneas desde a etapa de encapsulamento.&#x20;
 
@@ -435,7 +435,7 @@ public abstract class ServicoMensagemInstantanea {
 }
 ```
 
-## Interface
+### Interface
 
 > [!WARNING]
 > Antes de tudo, NÃO estamos nos referindo a interface gráfica. Ok? 😁😉
