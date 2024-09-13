@@ -5,9 +5,7 @@
 Linguagem de Modelagem Unificada ou UML, é uma notação, que possibilita a representação gráfica do projeto.
 
 <div align="center">
-
-![](./images/uml-1.png)
-
+  <img src="./images/uml-1.png" alt="Unified Modeling Language">
 </div>
 
 ## Introdução
@@ -17,9 +15,7 @@ Na UML, temos três conceitos necessários para compreendermos inicialmente:&#x2
 **Diagramas**, **elementos** e **relacionamentos**.
 
 <div align="center">
-
-![](./images/uml-2.png)
-
+  <img src="./images/uml-2.png" alt="Unified Modeling Language">
 </div>
 
 As notações UML, são distribuídas em duas categorias de diagramas, a estrutural e comportamental conforme listagem abaixo:
@@ -55,9 +51,7 @@ Em um diagrama, as classes podem existir de forma independente, mas obviamente h
 Uma associação, define um relacionamento entre duas classes, permitindo que um objeto tenha acesso a estrutura de um outro objeto.
 
 <div align="center">
-
-![](./images/uml-3.png)
-
+  <img src="./images/uml-3.png" alt="Associação Simples, Associação Bidirecional, Agregação e Composição">
 </div>
 
 * **Agregação:** Um tipo especial de associação. Em uma agregação, a classe principal (chamada objeto-todo) precisa ser complementada por um ou mais objetos de uma mesma classe. Esse tipo de associação tenta demonstrar uma relação **todo/parte**
@@ -92,13 +86,13 @@ Os atributos e métodos de uma classe, podem receber níveis de visibilidade, e 
 #### Representação
 
 <div align="center">
-
-![](./images/uml-4.png)
-
+  <img src="./images/uml-4.png" alt="">
 </div>
 
 ### Ferramentas
 
 Existem inúmeras ferramentas de diagramação, tanto online, como pagas e gratuitas.
 
-![](./images/uml-5.png)
+<div align="center">
+  <img src="./images/uml-5.png" alt="Astah, Lucidchart, Draw.io e StarUML">
+</div>

@@ -1,4 +1,4 @@
-# Pilares do P O O
+# Pilares do POO
 
 ## Introdução
 
@@ -10,18 +10,21 @@ A programação orientada a objetos é bem requisitada no contexto das aplicaç�
 
 Abaixo segue uma definição conceitual dos quatro pilares da programação orientada a objetos:
 
-* **Encapsulamento:** Nem tudo precisa estar visível, grande parte do nosso algoritmo pode ser distribuído em métodos com finalidades específicas que complementa uma ação global em nossa aplicação.
+- **Encapsulamento:** Nem tudo precisa estar visível, grande parte do nosso algoritmo pode ser distribuído em métodos com finalidades específicas que complementa uma ação global em nossa aplicação.
 
-    Exemplo: Ligar um veículo exige muitas etapas para a engenharia, mas o condutor só visualiza  a ignição, da partida e a _“magia”_ acontece.
-* **Herança:** Características e comportamentos comuns, podem ser elevados e compartilhados através de uma hierarquia de objetos.
+  Exemplo: Ligar um veículo exige muitas etapas para a engenharia, mas o condutor só visualiza  a ignição, da partida e a _“magia”_ acontece.
 
-    Exemplo: Um Carro e uma Motocicleta possuem propriedades como placa, chassi, ano de fabricação e métodos como acelerar, frear. Logo, para não ser um processo de codificação redundante, podemos desfrutar da herança criando uma classe **Veiculo** para que seja herdada por Carro e Motocicleta.
-* **Abstração:** É a indisponibilidade para determinar a lógica de um ou vários comportamentos em um objeto.
+- **Herança:** Características e comportamentos comuns, podem ser elevados e compartilhados através de uma hierarquia de objetos.
 
-    Exemplo: **Veículo** determina duas ações como acelerar e frear, logo, estes comportamentos deverão ser _abstratos_ pois existe mais de uma maneira de se realizar a mesma operação.   ver _Polimorfismo_.
-* **Polimorfismo:** São as inúmeras maneiras de se realizar uma mesma ação.
+  Exemplo: Um Carro e uma Motocicleta possuem propriedades como placa, chassi, ano de fabricação e métodos como acelerar, frear. Logo, para não ser um processo de codificação redundante, podemos desfrutar da herança criando uma classe **Veiculo** para que seja herdada por Carro e Motocicleta.
 
-    Exemplo: Veículo determina duas ações como acelerar e frear, primeiramente precisamos identificar se estaremos nos referindo a **Carro** ou **Motocicleta** para determinar a lógica de aceleração e frenagem dos respectivos veículos.  &#x20;
+- **Abstração:** É a indisponibilidade para determinar a lógica de um ou vários comportamentos em um objeto.
+
+  Exemplo: **Veículo** determina duas ações como acelerar e frear, logo, estes comportamentos deverão ser _abstratos_ pois existe mais de uma maneira de se realizar a mesma operação.   ver _Polimorfismo_.
+
+- **Polimorfismo:** São as inúmeras maneiras de se realizar uma mesma ação.
+
+  Exemplo: Veículo determina duas ações como acelerar e frear, primeiramente precisamos identificar se estaremos nos referindo a **Carro** ou **Motocicleta** para determinar a lógica de aceleração e frenagem dos respectivos veículos.  &#x20;
 
 ### Em prática
 
@@ -29,39 +32,44 @@ Para ilustrar a proposta dos Princípios de POO no nosso cotidiano, vamos simula
 
 **MSN Messenger** foi um programa de mensagens instantâneas criado pela Microsoft Corporation. O serviço nasceu em 22 de julho de 1999, anunciando-se como um serviço que permitia falar com uma pessoa através de conversas instantâneas pela internet. Ao longo dos anos, surgiram novos serviços de mensagens pela internet, como **Facebook Messenger** e o **VKontakte Telegram**.
 
-![](./images/poo-10.png)
+<div align="center">
+  <img src="./images/poo-10.png" alt="MSN, Facebook Messenger and Telegram">
+</div>
 
 Vamos descrever em UML e depois em código, algumas das principais funcionalidades de qualquer serviço de comunicação instantânea pela internet, inicialmente pelo MSN Messenger e depois inserindo os demais, considerando os princípios de POO.
 
 <details>
   <summary>Representação</summary>
-    - UML:
-  
-   ![](./images/poo-9.png)
+
+  - UML:
+
+  <div align="center">
+    <img src="./images/poo-9.png" alt="MSN UML">
+  </div>
 
   Pontos de atenção:
 
-* Todos os métodos da classe são **public** (tudo realmente precisa estar visível ?);
-* Só existe uma única forma de se comunicar via internet (como ter novas formas de se comunicar mantendo a proposta central ?).
+  - Todos os métodos da classe são **public** (tudo realmente precisa estar visível ?);
+  - Só existe uma única forma de se comunicar via internet (como ter novas formas de se comunicar mantendo a proposta central ?).
 
-* CODE:
+  - CODE:
 
-```java
-public class MSNMessenger {
+  ```java
+  public class MSNMessenger {
     public void enviarMensagem() {
-        System.out.println("Enviando mensagem");
+      System.out.println("Enviando mensagem");
     }
     public void receberMensagem() {
-        System.out.println("Recebendo mensagem");
+      System.out.println("Recebendo mensagem");
     }
     public void validarConectadoInternet() {
-        System.out.println("Validando se está conectado a internet");
+      System.out.println("Validando se está conectado a internet");
     }
     public void salvarHistoricoMensagem() {
-        System.out.println("Salvando o histórico da mensagem");
+      System.out.println("Salvando o histórico da mensagem");
     }
-}
-```
+  }
+  ```
 
 </details>
 
@@ -82,27 +90,29 @@ Quanto ao MSN Messenger, para nós, só é relevante saber que podemos e como de
 
 Vamos a revisão de nossa implementação
 
-![](./images/poo-8.png)
+<div align="center">
+  <img src="./images/poo-8.png" alt="MSN UML">
+</div>
 
 <details>
   <summary>Antes</summary>
 
   ```java
   /*
- * Simulação do uso da classe MSNMessenger
- */
-public class ComputadorPedrinho {
+   * Simulação do uso da classe MSNMessenger
+   */
+  public class ComputadorPedrinho {
     public static void main(String[] args) {
-        //abrindo MSN Messenger
-        MSNMessenger msn = new MSNMessenger();
+      //abrindo MSN Messenger
+      MSNMessenger msn = new MSNMessenger();
 
-        msn.validarConectadoInternet();
-        msn.enviarMensagem();
-        msn.salvarHistoricoMensagem();
+      msn.validarConectadoInternet();
+      msn.enviarMensagem();
+      msn.salvarHistoricoMensagem();
 
-        msn.receberMensagem();
+      msn.receberMensagem();
     }
-}
+  }
   ```
 
 </details>
@@ -111,30 +121,30 @@ public class ComputadorPedrinho {
   <summary>MSNMessenger.java</summary>
 
   ```java
-    public class MSNMessenger {
+  public class MSNMessenger {
     public void enviarMensagem() {
-        //primeiro confirmar se esta conectado a internet
-        validarConectadoInternet();
+      //primeiro confirmar se esta conectado a internet
+      validarConectadoInternet();
 
-        System.out.println("Enviando mensagem");
+      System.out.println("Enviando mensagem");
 
-        //depois de enviada, salva o histórico da mensagem
-        salvarHistoricoMensagem();
+      //depois de enviada, salva o histórico da mensagem
+      salvarHistoricoMensagem();
     }
-    
+
     public void receberMensagem() {
-        System.out.println("Recebendo mensagem");
+      System.out.println("Recebendo mensagem");
     }
 
     //métodos privadas, visíveis somente na classe
     private void validarConectadoInternet() {
-        System.out.println("Validando se está conectado a internet");
+      System.out.println("Validando se está conectado a internet");
     }
-    
+
     private void salvarHistoricoMensagem() {
-        System.out.println("Salvando o histórico da mensagem");
+      System.out.println("Salvando o histórico da mensagem");
     }
-}
+  }
   ```
 
 </details>
@@ -143,20 +153,20 @@ public class ComputadorPedrinho {
   <summary>Depois</summary>
 
   ```java
-    /*
- * Simulação do uso da classe MSNMessenger
- * com métodos encapsulados - privados
- */
-public class ComputadorPedrinho {
- public static void main(String[] args) {
-  //abrindo MSN Messenger
-  MSNMessenger msn = new MSNMessenger();
-  
-  msn.enviarMensagem();
-  
-  msn.receberMensagem();
- }
-}
+  /*
+   * Simulação do uso da classe MSNMessenger
+   * com métodos encapsulados - privados
+   */
+  public class ComputadorPedrinho {
+    public static void main(String[] args) {
+      // abrindo MSN Messenger
+      MSNMessenger msn = new MSNMessenger();
+
+      msn.enviarMensagem();
+
+      msn.receberMensagem();
+    }
+  }
   ```
 
 </details>
@@ -167,10 +177,16 @@ public class ComputadorPedrinho {
 
 Já imaginou você ter sido classificado para a vaga de emprego de seus sonhos e como desafio seria justamente você criar um diagrama de classes e em seguida os respectivos arquivos .java, que apresentasse os fundamentos de POO com base no contexto de vários aplicativos de mensagens instantâneas? Sorte sua que você está nos acompanhando nesta nossa jornada. 😜
 
-![](./images/poo-10.png)
+<div align="center">
+  <img src="./images/poo-10.png" alt="MSN, Facebook Messenger and Telegram">
+</div>
 
 > [!NOTE]
 > Com base na nossa classe **MsnMessenger**, você já poderia dar os primeiros passos para se dar bem no processo seletivo, simplemente, copiar e colar a estrutura, para as novas classes **FacebookMessenger, Telegram** e **BINGO 😁😁😁!!!**
+
+<div align="center">
+  <img src="./images/poo-11.png" alt="MSN, Facebook Messenger and Telegram UMLs">
+</div>
 
 Agora é escrever o código das classes acima e esperar pela contratação !
 
@@ -182,33 +198,35 @@ Além de uma compreensão do desafio, é necessário que, tenhamos domínio dos 
 > [!NOTE]
 > Todas as três classes, possuem a mesma estrutura comportamental e diante deste contexto, se encaixa perfeitamente o segundo pilar da POO, a Herança.
 
-![](./images/poo-12.png)
+<div align="center">
+  <img src="./images/poo-12.png" alt="MSN, Facebook Messenger and Telegram UMLs">
+</div>
 
 <details>
   <summary>ServicoPai</summary>
 
   ```java
     //a classe MSNMessenger é ou representa
-public class ServicoMensagemInstantanea {
+  public class ServicoMensagemInstantanea {
     public void enviarMensagem() {
-        //primeiro confirmar se esta conectado a internet
-        validarConectadoInternet();
-        System.out.println("Enviando mensagem");
-        //depois de enviada, salva o histórico da mensagem
-        salvarHistoricoMensagem();
+      //primeiro confirmar se esta conectado a internet
+      validarConectadoInternet();
+      System.out.println("Enviando mensagem");
+      //depois de enviada, salva o histórico da mensagem
+      salvarHistoricoMensagem();
     }
     public void receberMensagem() {
-        System.out.println("Recebendo mensagem");
+      System.out.println("Recebendo mensagem");
     }
 
     //métodos privadas, visíveis somente na classe
     private void validarConectadoInternet() {
-        System.out.println("Validando se está conectado a internet");
+      System.out.println("Validando se está conectado a internet");
     }
     private void salvarHistoricoMensagem() {
-        System.out.println("Salvando o histórico da mensagem");
+      System.out.println("Salvando o histórico da mensagem");
     }
-}
+  }
   ```
 
 </details>
@@ -217,9 +235,9 @@ public class ServicoMensagemInstantanea {
   <summary>MSN</summary>
 
   ```java
-    public class MSNMessenger extends ServicoMensagemInstantanea{
+  public class MSNMessenger extends ServicoMensagemInstantanea {
 
-}
+  }
   ```
 
 </details>
@@ -228,9 +246,9 @@ public class ServicoMensagemInstantanea {
   <summary>Facebook</summary>
 
   ```java
-    public class FacebookMessenger extends ServicoMensagemInstantanea {
+  public class FacebookMessenger extends ServicoMensagemInstantanea {
 
-}
+  }
   ```
 
 </details>
@@ -239,9 +257,9 @@ public class ServicoMensagemInstantanea {
   <summary>Telegram</summary>
 
   ```java
-    public class Telegram extends ServicoMensagemInstantanea {
+  public class Telegram extends ServicoMensagemInstantanea {
 
-}
+  }
   ```
 
 </details>
@@ -250,23 +268,21 @@ public class ServicoMensagemInstantanea {
   <summary>ComputadorPedrinho</summary>
 
   ```java
-    public class ComputadorPedrinho {
+  public class ComputadorPedrinho {
     public static void main(String[] args) {
+      MSNMessenger msn = new MSNMessenger();
+      msn.enviarMensagem();
+      msn.receberMensagem();
 
-        MSNMessenger msn = new MSNMessenger();
-        msn.enviarMensagem();
-        msn.receberMensagem();
+      FacebookMessenger fbm = new FacebookMessenger();
+      fbm.enviarMensagem();
+      fbm.receberMensagem();
 
-        FacebookMessenger fbm = new FacebookMessenger();
-        fbm.enviarMensagem();
-        fbm.receberMensagem();
-
-        Telegram tlg = new Telegram();
-        tlg.enviarMensagem();
-        tlg.receberMensagem();
-
+      Telegram tlg = new Telegram();
+      tlg.enviarMensagem();
+      tlg.receberMensagem();
     }
-}
+  }
   ```
 
 </details>
@@ -295,10 +311,10 @@ Observem a nova estruturação dos códigos abaixo, com base na implementação 
   <summary>ServicoPai</summary>
 
   ```java
-public abstract class ServicoMensagemInstantanea {
+  public abstract class ServicoMensagemInstantanea {
     public abstract void enviarMensagem();
     public abstract void receberMensagem();
-}
+  }
   ```
 
 </details>
@@ -307,14 +323,14 @@ public abstract class ServicoMensagemInstantanea {
   <summary>MSN</summary>
 
   ```java
-public class MSNMessenger extends ServicoMensagemInstantanea{
+  public class MSNMessenger extends ServicoMensagemInstantanea{
     public void enviarMensagem() {
-        System.out.println("Enviando mensagem pelo MSN Messenger");
+      System.out.println("Enviando mensagem pelo MSN Messenger");
     }
     public void receberMensagem() {
-        System.out.println("Recebendo mensagem pelo MSN Messenger");
+      System.out.println("Recebendo mensagem pelo MSN Messenger");
     }
-}
+  }
   ```
 
 </details>
@@ -323,14 +339,14 @@ public class MSNMessenger extends ServicoMensagemInstantanea{
   <summary>Facebook</summary>
 
   ```java
-public class FacebookMessenger extends ServicoMensagemInstantanea {
+  public class FacebookMessenger extends ServicoMensagemInstantanea {
     public void enviarMensagem() {
-        System.out.println("Enviando mensagem pelo Facebook Messenger");
+      System.out.println("Enviando mensagem pelo Facebook Messenger");
     }
     public void receberMensagem() {
-        System.out.println("Recebendo mensagem pelo Facebook Messenger");
+      System.out.println("Recebendo mensagem pelo Facebook Messenger");
     }
-}
+  }
   ```
 
 </details>
@@ -339,14 +355,14 @@ public class FacebookMessenger extends ServicoMensagemInstantanea {
   <summary>Telegram</summary>
 
   ```java
-public class Telegram extends ServicoMensagemInstantanea {
+  public class Telegram extends ServicoMensagemInstantanea {
     public void enviarMensagem() {
-        System.out.println("Enviando mensagem pelo Telegram");
+      System.out.println("Enviando mensagem pelo Telegram");
     }
     public void receberMensagem() {
-        System.out.println("Recebendo mensagem pelo Telegram");
+      System.out.println("Recebendo mensagem pelo Telegram");
     }
-}
+  }
   ```
 
 </details>
@@ -360,63 +376,62 @@ public class Telegram extends ServicoMensagemInstantanea {
 
 Podemos observar no contexto de **Abstração** e **Herança,** que conseguimos criar uma singularidade estrutural de nossos elementos. Isso quer dizer que, qualquer classe que deseja representar um serviço de mensagens, basta estender a classe **`ServicoMensagemInstantanea`** e implementar, os respectivos métodos _abstratos_. O que vale reforçar aqui é, cada classe terá a mesma ação, executando procedimentos de maneira especializada.&#x20;
 
-![](./images/poo-13.png)
+<div align="center">
+  <img src="./images/poo-13.png" alt="Polimorfismo">
+</div>
 
 Este é o resultado do que denominamos como, Polimorfismo. Veja o exemplo abaixo:
 
 ```java
 public class ComputadorPedrinho {
- public static void main(String[] args) {
-  
-  ServicoMensagemInstantanea smi = null;
-  
-  /*
-      NÃO SE SABE QUAL APP 
+  public static void main(String[] args) {
+    ServicoMensagemInstantanea smi = null;
+    /*
+      NÃO SE SABE QUAL APP
       MAS QUALQUER UM DEVERÁ ENVIAR E RECEBER MENSAGEM
-   */
-  String appEscolhido="???"; 
-  
-  if(appEscolhido.equals("msn"))
-   smi = new MSNMessenger();
-  else if(appEscolhido.equals("fbm"))
-   smi = new FacebookMessenger();
-  else if(appEscolhido.equals("tlg"))
-   smi = new Telegram();
-  
-   
-  smi.enviarMensagem();
-  smi.receberMensagem();
- }
+    */
+    String appEscolhido="???";
+
+    if(appEscolhido.equals("msn"))
+    smi = new MSNMessenger();
+    else if(appEscolhido.equals("fbm"))
+    smi = new FacebookMessenger();
+    else if(appEscolhido.equals("tlg"))
+    smi = new Telegram();
+
+
+    smi.enviarMensagem();
+    smi.receberMensagem();
+  }
 }
 ```
 
 > [!NOTE]
 > Para concluirmos a compreensão, Polimorfismo permite que as classes mais abstratas, determine ações uniformes, para que cada classe filha concreta, implemente os comportamentos de forma específica.
 
-### **Modificador protected**
+### Modificador protected
 
 Vamos para uma retrospectiva quanto ao requisito do nosso sistema de mensagens instantâneas desde a etapa de encapsulamento.&#x20;
 
-O nosso requisito, solicita que além de Enviar e Receber Mensagens, precisamos validar se o aplicativo está conectado a internet (**`validarConectadoInternet`**) e salvar o histórico de cada mensagem (**`salvarHistoricoMensagem`**).
+O nosso requisito, solicita que além de Enviar e Receber Mensagens, precisamos validar se o aplicativo está conectado a internet (`validarConectadoInternet`) e salvar o histórico de cada mensagem (`salvarHistoricoMensagem`).
 
-Sabemos que cada aplicativo, costuma salvar as mensagens em seus respectivos servidores cloud, mas e quanto validar se está conectado a internet? Não poderia ser um mecanismo comum a todos ? Logo, qualquer classe filha, de **ServicoMensagemInstantanea** poderia desfrutar através de herança, esta funcionalidade.
+Sabemos que cada aplicativo, costuma salvar as mensagens em seus respectivos servidores cloud, mas e quanto validar se está conectado a internet? Não poderia ser um mecanismo comum a todos ? Logo, qualquer classe filha, de `ServicoMensagemInstantanea` poderia desfrutar através de herança, esta funcionalidade.
 
 > [!TIP]
 > Mas fica a reflexão do que já aprendemos sobre visibilidade de recursos: Com o modificador `private` somente a classe conhece a implementação, quanto que o modificador `public` todos passarão a conhecer. Mas gostaríamos que, somente as classes filhas soubessem. Bem, é ai que entra o modificador `protected`.
 
 ```java
 public abstract class ServicoMensagemInstantanea {
- 
- public abstract void enviarMensagem();
- public abstract void receberMensagem();
- 
- //mais um método que todos os filhos deverão implementar
- public abstract void salvarHistoricoMensagem();
- 
- //somente os filhos conhecem este método
- protected void validarConectadoInternet() {
-  System.out.println("Validando se está conectado a internet");
- } 
+  public abstract void enviarMensagem();
+  public abstract void receberMensagem();
+
+  //mais um método que todos os filhos deverão implementar
+  public abstract void salvarHistoricoMensagem();
+
+  //somente os filhos conhecem este método
+  protected void validarConectadoInternet() {
+    System.out.println("Validando se está conectado a internet");
+  }
 }
 ```
 
@@ -433,11 +448,15 @@ Observem que não há uma especificação de marca, modelo e ou capacidades de e
 
 Ilustração de interfaces dos equipamentos citados acima:
 
-![](./images/poo-14.png)
+<div align="center">
+  <img src="./images/poo-14.png" alt="Ícones de Impressoras">
+</div>
 
 Representação de objetos reais com base nas interfaces citadas acima:
 
-![](./images/poo-15.png)
+<div align="center">
+  <img src="./images/poo-15.png" alt="Impressoras">
+</div>
 
 > Então o que você está dizendo é que **interfaces** é o mesmo que **classes**? Um molde para representação dos objetos reais?
 
@@ -445,23 +464,31 @@ Este é um dos maiores questionamentos dos desenvolvedores, no que se refere a m
 
 Como citado acima, Java não permite herança múltipla, logo, vamos imaginar que, recebemos o desafio de projetar uma nova classe, para criar objetos que representam as três características citadas acima e que iremos denominar de **EquipamentoMultifunional**.
 
-![](./images/poo-16.png)
+<div align="center">
+  <img src="./images/poo-16.png" alt="Impressoras">
+</div>
 
 Para uma melhor compreensão, vamos analisar os diagramas de classes abaixo, comparando o conceito de herança entre, classes e interfaces.
 
 **Cenário 1**
 
-![](./images/poo-18.png)
+<div align="center">
+  <img src="./images/poo-18.png" alt="UMLs de Impressora, Copiadora e Digitalizadora">
+</div>
 
 **Cenário 2**
 
-![](./images/poo-19.png)
+<div align="center">
+  <img src="./images/poo-19.png" alt="UMLs de Impressora, Copiadora e Digitalizadora">
+</div>
 
 Antes de iniciarmos a representação via código, devemos compreender que, assim como em classes e métodos abstratos, quando herdamos de uma interface, precisamos implementar todos os seus métodos, pois eles são implicitamente **`public abstract`**.
 
 E para encerrar, uma das mais importantes ilustrações quanto ao uso de interfaces para desenvolvimento de componentes revolucionários, é apresentado em 2007 por nada mais nada menos que Steve Jobs ao lançar o primeiro **iPhone** da história.
 
-![](./images/poo-17.png)
+<div align="center">
+  <img src="./images/poo-17.png" alt="iPod, Phone e Internet">
+</div>
 
 > [!NOTE]
 > Um único equipamento, que pode ser considerado tanto como um: **Reprodutor Musical,  Aparelho Telefônico e Navegador na Internet.**
